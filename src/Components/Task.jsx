@@ -7,12 +7,18 @@ const Task = ({ title, description, deleteTask, index }) => {
         <p className="text-xl font-semibold">{title}</p>
         <span className="text-stone-700 font-medium ">{description}</span>
       </div>
-      <div>  
+      <div className="flex gap-2">  
         <button
-          className="text-white bg-red-700 text-4xl rounded-full px-3  hover:bg-red-900 "
+          className="text-white bg-red-700 text-6xl rounded-full px-5  hover:bg-red-900 border-[3px] border-sky-800"
           onClick={() => deleteTask(index)}
         >
           -
+        </button>
+        <button
+          className="text-white bg-red-700 text-sm rounded-full px-5  hover:bg-red-900 border-[3px] border-sky-800"
+          onClick={() => deleteTask(index)}
+        >
+          Edit
         </button>
       </div>
     </div>
